@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Books</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Titulo</th>
+      <th>Author</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @books.each do |book| %>
+      <tr>
+        <td><%= link_to book.titulo, book %></td>
+        <td><%= link_to book.author.nombre, book.author %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
